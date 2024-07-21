@@ -17,12 +17,12 @@
 
 ## Просмотр сайта
 
-Вы можете просмотреть сайт по [этой ссылке](https://lobanich.github.io/favorite-games/).
+Вы можете просмотреть сайт по [этой ссылке](https://lobanich.github.io/favorite-games-vue/).
 
 ## Установка и запуск
 
 1. Склонируйте репозиторий:
-git clone  https://github.com/Lobanich/favorite-games.git
+git clone  https://github.com/Lobanich/favorite-games-vue.git
 2. Откройте index.html
 
 ## Автор
