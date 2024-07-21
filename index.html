@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite-games-vue</title>
+    <meta name="description" content="Страница, посвященная моим любимым играм, включая экшн, РПГ и стратегии.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <h1>Мои любимые игры</h1>
+            <nav class="nav">
+                <ul>
+                    <li v-for="genre in genres" :key="genre">
+                        <a :href="'#' + genre.toLowerCase()">{{ genre }}</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <section v-for="(group, genre) in games" :key="genre" :id="genre.toLowerCase()" class="section">
+                <h2>{{ genre }}</h2>
+                <table class="table">
+                    <tr>
+                        <th>Игра</th>
+                        <th>Описание</th>
+                    </tr>
+                    <tr v-for="game in group" :key="game.title">
+                        <td>{{ game.title }}</td>
+                        <td>{{ game.description }}</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>2024 Автор: Lobanich</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
