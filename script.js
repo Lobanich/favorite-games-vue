@@ -1,9 +1,12 @@
 const { createApp } = Vue;
 
 createApp({
+    // @todo используй setup-функцию вместо data https://vuejs.org/guide/introduction.html
     data() {
         return {
+            // @todo для вычисления жанров используй computed https://vuejs.org/guide/essentials/computed.html
             genres: ["Action", "RPG", "Strategy"],
+            // @todo перепиши все данные на такую же структуру, как была в прошлой репе
             games: {
                 Action: [
                     { title: "DOOM", description: "Классический шутер от первого лица" },
