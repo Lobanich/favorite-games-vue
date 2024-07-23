@@ -1,4 +1,4 @@
-const { createApp, ref, computed } = Vue;
+const { createApp, ref, computed, unref } = Vue;
 
 createApp({
     setup() {
@@ -38,9 +38,7 @@ createApp({
             }
         ]);
 
-        const navGenres = computed(() => {
-            return games.value.map(genre => genre.genre);
-        });
+        const navGenres = computed(() => unref(games).map(genre => genre.genre));
 
         return {
             games,
